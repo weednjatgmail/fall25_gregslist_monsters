@@ -24,7 +24,7 @@
 
   <main>
     <section class="text-center my-3">
-      <button class="btn btn-primary">
+      <button onclick="app.carsController.toggleCarsSection()" class="btn btn-primary">
         Cars 🚗
       </button>
       <button onclick="app.monstersController.toggleMonsterSection()" class="btn btn-primary">
@@ -32,7 +32,9 @@
       </button>
     </section>
 
-    <section class="container-fluid">
+    <!-- TODO houses go here! -->
+
+    <section id="cars-section" class="container-fluid d-none">
       <div class="row my-3">
         <div class="col-md-6">
           <div id="car-form-placeholder">

@@ -50,4 +50,8 @@ export class CarsController {
     document.getElementById('car-form').classList.remove('d-none')
     document.getElementById('car-form-placeholder').classList.add('d-none')
   }
+
+  toggleCarsSection() {
+    document.getElementById('cars-section').classList.toggle('d-none')
+  }
 }
