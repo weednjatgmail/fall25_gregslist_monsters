@@ -1,6 +1,7 @@
 import { AuthController } from './Auth/AuthController.js';
 import { CarsController } from './controllers/CarsController.js';
 import { ExampleController } from './controllers/ExampleController.js';
+import { HousesController } from './controllers/HousesController.js';
 import { MonstersController } from './controllers/MonstersController.js';
 
 class App {
@@ -11,6 +12,8 @@ class App {
   monstersController = new MonstersController()
 
   carsController = new CarsController()
+
+  housesController = new HousesController()
 
 }
 
