@@ -26,9 +26,16 @@ export class Car {
           src="${this.img}"
           alt="${this.year} ${this.make} ${this.model}" class="car-img">
         <div class="p-3">
-
-          <p class="fs-3 m-0">${this.year} ${this.make} ${this.model}</p>      
-          <small title="${this.createdAtTime}">Listed on ${this.createdAtDate}</small>
+          <div class="d-flex justify-content-between">
+            <div>
+            <p class="fs-3 m-0">${this.year} ${this.make} ${this.model}</p>      
+            <small title="${this.createdAtTime}">Listed on ${this.createdAtDate}</small>
+            </div>
+            <div class="text-end">
+              <img src="${this.creatorPicture}" alt="${this.creatorName}" class="creator-img">
+              <p>Listed by ${this.creatorName}</p>
+            </div>
+          </div>
           <p class="mt-3"></p>
           <p>${this.description}</p>
         </div>

@@ -27,3 +27,10 @@ main {
   top: 0;
   right: 0;
 }
+
+.creator-img {
+  width: 75px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+}
