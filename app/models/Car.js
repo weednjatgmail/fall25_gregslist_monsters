@@ -8,7 +8,7 @@ export class Car {
     this.img = data.imgUrl
     this.year = data.year
     this.price = data.price
-    this.description = data.description
+    this.description = data.description ?? ''
     this.engineType = data.engineType
     this.creatorId = data.creatorId
     this.createdAt = new Date(data.createdAt)

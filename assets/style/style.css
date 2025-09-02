@@ -34,3 +34,7 @@ main {
   border-radius: 50%;
   object-fit: cover;
 }
+
+label {
+  display: block;
+}

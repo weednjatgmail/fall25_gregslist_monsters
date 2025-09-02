@@ -17,6 +17,7 @@
     <nav class="navbar bg-codeworks text-light gap-2 px-2">
       <img src="./assets/img/logo.png" height="45" alt="" loading="lazy">
       <div><b>gregslist_async</b></div>
+      <!-- NOTE do not remove this id if you want users to be able to log in -->
       <div class="ms-auto" id="authstate"></div>
     </nav>
   </header>
@@ -34,23 +35,22 @@
     <section class="container-fluid">
       <div class="row my-3">
         <div class="col-md-6">
-          <form onsubmit="app.carsController.submitCar()" class="sticky-top">
+          <div id="car-form-placeholder">
+            Please log in so you can list your car
+          </div>
+          <form onsubmit="app.carsController.submitCar()" id="car-form" class="sticky-top d-none">
             <div>
               <label for="car-make">Car Make</label>
-              <input id="car-make" type="text" minlength="2" maxlength="50" required name="make" class="w-100">
+              <input id="car-make" type="text" maxlength="500" required name="make" class="w-100">
             </div>
             <div>
               <label for="car-model">Car Model</label>
-              <input id="car-model" type="text" minlength="1" maxlength="100" required name="model" class="w-100">
+              <input id="car-model" type="text" maxlength="500" required name="model" class="w-100">
             </div>
             <div>
               <label for="car-year">Car Year</label>
               <!-- TODO it would be good to automate setting the max here -->
               <input id="car-year" type="number" min="1886" max="2026" required name="year" class="w-100">
-            </div>
-            <div>
-              <label for="car-mileage">Car Mileage</label>
-              <input id="car-mileage" type="number" min="0" max="4000000" required name="mileage" class="w-100">
             </div>
             <div>
               <label for="car-price">Car Price (in USD)</label>
@@ -60,26 +60,29 @@
               <label for="car-img-url">Car Image URL</label>
               <input id="car-img-url" type="url" maxlength="500" required name="imgUrl" class="w-100">
             </div>
-
             <div>
-              <label for="car-condition">Car Condition</label>
-              <input id="car-condition" type="text" maxlength="200" name="condition" class="w-100">
+              <label for="car-description">Car Description</label>
+              <textarea name="description" id="car-description" maxlength="500" class="w-100"></textarea>
             </div>
             <div>
-              <label for="car-horse-power">Car Horse Power</label>
-              <input id="car-horse-power" type="number" min="1" max="500" required name="horsePower" class="w-100">
+              <label for="car-engine-type">Car Engine Type</label>
+              <select name="engineType" id="car-engine-type">
+                <option value="unknown" selected>Unknown</option>
+                <option value="2 stroke">2 stroke</option>
+                <option value="4 cylinder">4 cylinder</option>
+                <option value="v6">v6</option>
+                <option value="v8">v8</option>
+                <option value="v10">v10</option>
+                <option value="v12">v12</option>
+                <option value="small">small</option>
+                <option value="medium">medium</option>
+                <option value="large">large</option>
+                <option value="chuncko">chuncko</option>
+              </select>
             </div>
             <div>
               <label for="car-color">Car Color</label>
-              <input id="car-color" type="color" required name="color">
-            </div>
-            <div>
-              <label for="car-has-clean-title">Does the car have a clean title?</label>
-              <input id="car-has-clean-title" type="checkbox" name="hasCleanTitle">
-            </div>
-            <div>
-              <label for="car-is-drivable">Can I drive it off the lot?</label>
-              <input id="car-is-drivable" type="checkbox" name="isDrivable">
+              <input id="car-color" type="color" name="color">
             </div>
             <button type="reset">Reset</button>
             <button type="submit">Submit</button>

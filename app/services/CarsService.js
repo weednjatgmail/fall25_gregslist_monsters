@@ -4,9 +4,11 @@ import { api } from "../utils/Axios.js";
 
 class CarsService {
   async createCar(carData) {
-    const response = await api.post('api/cars')
-    console.log('CREATED CAR ✨🚗', response);
-
+    // NOTE carData becomes the request body (payload)
+    const response = await api.post('api/cars', carData)
+    console.log('CREATED CAR ✨🚗', response.data);
+    const car = new Car(response.data)
+    AppState.cars.push(car)
   }
   async getCars() {
     console.log('getting cars 🚗🚗🚗');
