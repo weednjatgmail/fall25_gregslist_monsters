@@ -22,14 +22,27 @@
     </nav>
   </header>
 
-  <section class="container-fluid">
-    <div id="monster-list" class="row">
-
-    </div>
-  </section>
   <main>
+    <section class="text-center my-3">
+      <button class="btn btn-primary">
+        Cars 🚗
+      </button>
+      <button onclick="app.monstersController.toggleMonsterSection()" class="btn btn-primary">
+        Monsters 👹
+      </button>
+    </section>
 
+    <section class="container-fluid">
+      <div id="car-listings" class="row">
 
+      </div>
+    </section>
+
+    <section class="container-fluid">
+      <div id="monster-list" class="row d-none">
+
+      </div>
+    </section>
   </main>
 
   <footer class="text-bg-dark">

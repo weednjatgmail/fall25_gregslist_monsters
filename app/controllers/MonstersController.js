@@ -4,7 +4,7 @@ import { monstersService } from "../services/MonstersService.js";
 
 export class MonstersController {
   constructor() {
-    console.log('👺🎮');
+    // console.log('👺🎮');
     this.getMonsters()
     // this.drawMonsters() can't draw monsters when the page loads
     AppState.on('monsters', this.drawMonsters)
@@ -16,8 +16,12 @@ export class MonstersController {
     monstersService.getMonsters()
   }
 
+  toggleMonsterSection() {
+    document.getElementById('monster-list').classList.toggle('d-none')
+  }
+
   drawMonsters() {
-    console.log('✏️👺');
+    // console.log('✏️👺');
     let monsterListElement = document.getElementById('monster-list')
     let monsterListContent = ''
     AppState.monsters.forEach((monster) => monsterListContent += monster.listCard)

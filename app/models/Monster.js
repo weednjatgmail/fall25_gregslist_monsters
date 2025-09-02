@@ -10,9 +10,11 @@ export class Monster {
 
   get listCard() {
     return `
-    <div class="card" style="width: 10em;">
+    <div class="col-md-3">
+    <div class="card">
       <img class="card-img-top" src="${this.picture}">
       <div class="card-body">${this.name}</div>
+    </div>
     </div>
     `
   }

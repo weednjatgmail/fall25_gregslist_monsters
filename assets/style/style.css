@@ -7,9 +7,6 @@ body {
 
 main {
   flex-grow: 1;
-  display: flex;
-  place-content: center;
-  align-items: center;
 }
 
 #pop-toast-container {
@@ -17,4 +14,16 @@ main {
   flex-direction: column;
   justify-content: start;
   align-items: end;
+}
+
+.car-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.car-price {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
