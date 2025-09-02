@@ -33,6 +33,8 @@ export class CarsController {
       console.log('data', dataFromForm);
       await carsService.createCar(dataFromForm)
       Pop.success('You car has been listed!')
+      // @ts-ignore
+      formThatSubmitted.reset()
     } catch (error) {
       console.error('COULD NOT CREATE CAR', error);
       Pop.error(error)
